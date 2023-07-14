@@ -47,10 +47,10 @@ Route::get('/categories/{category:slug}', function(Category $category){
     ]);
 });
 
-Route::get('/author/{user:username}', function(User $user){
+Route::get('/author/{author:username}', function(User $author){
     return view('author', [
         "title" => "Author Posts",
-        "name" => $user->name,
-        "posts" => $user->posts,
+        "name" => $author->name,
+        "posts" => $author->posts,
     ]);
 });
