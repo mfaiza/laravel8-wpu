@@ -10,8 +10,8 @@ class PostsController extends Controller
     public function index()
     {
         return view('posts', [
-            "title" => "Posts",
-            "posts" => Post::latest()->get(),
+            "title" => "All Posts",
+            "posts" => Post::with(["author", "category"])->latest()->get(),
         ]);
     }
 
