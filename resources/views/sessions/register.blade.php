@@ -9,37 +9,50 @@
                 </div>
                 <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
                     <h2 class="h2">{{ $title }}</h2>
-                    <form>
+                    <form action="/register" method="POST">
+                        @csrf
                         <!-- Name input -->
-                        <div class="form-floating mb-3">
-                            <input type="text" id="floatingInput" class="form-control form-control-lg"
-                                placeholder="Name" />
+                        <div class="form-floating mb-2">
+                            <input type="text" name="name" id="floatingInput" class="form-control form-control-lg @error('name') is-invalid @enderror"
+                                placeholder="Name" required value="{{ old('name') }}"/>
                             <label class="form-label" for="floatingInput">Name</label>
+                            @error('name')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                         <!-- Username input -->
-                        <div class="form-floating mb-3">
-                            <input type="text" id="floatingInput" class="form-control form-control-lg"
-                                placeholder="Username" />
+                        <div class="form-floating mb-2">
+                            <input type="text" name="username" id="floatingInput" class="form-control form-control-lg @error('username') is-invalid @enderror"
+                                placeholder="Username" required value="{{ old('username') }}"/>
                             <label class="form-label" for="floatingInput">Username</label>
+                            @error('username')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                         <!-- Email input -->
-                        <div class="form-floating mb-3">
-                            <input type="email" id="floatingInput" class="form-control form-control-lg"
-                                placeholder="name@example.com" />
+                        <div class="form-floating mb-2">
+                            <input type="email" name="email" id="floatingInput" class="form-control form-control-lg @error('email') is-invalid @enderror"
+                                placeholder="name@example.com" required value="{{ old('email') }}"/>
                             <label class="form-label" for="floatingInput">Email address</label>
+                            @error('email')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                         <!-- Password input -->
-                        <div class="form-floating mb-3">
-                            <input type="password" id="floatingPassword" class="form-control form-control-lg"
-                                placeholder="password" />
+                        <div class="form-floating mb-2">
+                            <input type="password" name="password" id="floatingPassword" class="form-control form-control-lg @error('password') is-invalid @enderror"
+                                placeholder="password" required/>
                             <label class="form-label" for="floatingPassword">Password</label>
+                            @error('password')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                         <!-- Submit button -->
                         <div class="d-grid gap-2">
                             <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
                         </div>
                     </form>
-                    <small>Already Have an Account? <a href="/login">Sign In</a></small>
+                    <small>Already Have an Account? <a href="/login" class="text-decoration-none">Sign In</a></small>
                 </div>
             </div>
         </div>

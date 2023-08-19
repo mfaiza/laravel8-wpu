@@ -8,6 +8,12 @@
                     <img src="img/login.svg" class="img-fluid" alt="Phone image">
                 </div>
                 <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+                    @if (session()->has('success'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            {{ session('success') }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    @endif
                     <h2 class="h2">{{ $title }}</h2>
                     <form>
                         <!-- Email input -->
@@ -26,7 +32,7 @@
 
                         <div class="d-flex justify-content-end align-items-center mb-3">
                             <!-- Checkbox -->
-                            <a href="#!">Forgot password?</a>
+                            <a href="#!" class="text-decoration-none">Forgot password?</a>
                         </div>
 
                         <!-- Submit button -->
@@ -48,10 +54,9 @@
               <i class="bi bi-twitter"></i></i>Continue with Twitter</a> --}}
 
                     </form>
-                    <small>Don't Have an Account? <a href="/register">Register</a></small>
+                    <small>Don't Have an Account? <a href="/register" class="text-decoration-none">Register</a></small>
                 </div>
             </div>
         </div>
     </section>
-    
 @endsection
