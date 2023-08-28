@@ -14,20 +14,30 @@
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
                     @endif
+                    @if (session()->has('failed'))
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            {{ session('failed') }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    @endif
                     <h2 class="h2">{{ $title }}</h2>
-                    <form>
+                    <form action="/login" method="POST">
+                        @csrf
                         <!-- Email input -->
                         <div class="form-floating mb-4">
-                            <input type="email" id="floatingInput" class="form-control form-control-lg"
-                                placeholder="name@example.com" />
-                            <label class="form-label" for="floatingInput">Email address</label>
+                            <input type="email" id="email" name="email" class="form-control form-control-lg @error('email') is-invalid @enderror"
+                                placeholder="name@example.com" autofocus required value="{{ old('email') }}"/>
+                            <label class="form-label" for="email">Email address</label>
+                            @error('email')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
 
                         <!-- Password input -->
                         <div class="form-floating mb-3">
-                            <input type="password" id="floatingPassword" class="form-control form-control-lg"
+                            <input type="password" id="password" name="password" class="form-control form-control-lg"
                                 placeholder="password" />
-                            <label class="form-label" for="floatingPassword">Password</label>
+                            <label class="form-label" for="password">Password</label>
                         </div>
 
                         <div class="d-flex justify-content-end align-items-center mb-3">
