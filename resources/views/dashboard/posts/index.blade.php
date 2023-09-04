@@ -4,7 +4,8 @@
         <h1 class="h2">My Posts, {{ auth()->user()->name }}</h1>
     </div>
 
-    <div class="table-responsive col-lg-8">
+    <div class="table-responsive col-lg-10">
+        <a href="/dashboard/posts/create" class="btn btn-primary mb-3">Create new post</a>
         <table class="table table-striped table-sm">
             <thead>
                 <tr>
