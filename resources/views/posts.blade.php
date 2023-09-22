@@ -59,8 +59,8 @@
                                     href="/posts?category={{ $post->category->slug }}">{{ $post->category->name }}</a>
                             </div>
                             @if ($post->image)
-                                <img src="{{ asset('storage/' . $post->image) }}" class="img-fluid"
-                                    alt="{{ $post->category->name }}">
+                                <img src="{{ asset('storage/' . $post->image) }}" class="img-fluid card-img-top"
+                                    alt="{{ $post->category->name }}" style="max-height: 276.8px;">
                             @else
                                 <img src="https://source.unsplash.com/500x400?{{ $post->category->name }}"
                                     class="card-img-top" alt="{{ $post->category->name }}">
@@ -86,3 +86,7 @@
         {{ $posts->links() }}
     </div>
 @endsection
+
+{{-- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae, facilis!
+
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, distinctio doloremque aut aliquid vero fugit. Cupiditate maiores beatae, repudiandae consequatur quasi autem ipsam vel veritatis nihil, rerum fuga. Mollitia consectetur tempora fuga dolor hic omnis vitae ullam a unde aliquam sapiente quia nam sunt, totam quidem eum magnam ipsum id accusantium aliquid. Aliquid rerum iusto vitae iste repellendus consequatur. Nemo aut cupiditate illo neque vel iusto vitae laboriosam dolores sequi odio magni voluptatem, sed, minima ea praesentium ex est quo a omnis cum adipisci, soluta voluptate eligendi ad! Ut nihil minus in, harum distinctio quae fugiat necessitatibus minima ducimus quam officiis, qui nostrum, a nemo fugit recusandae. Illum provident ratione libero quibusdam impedit id reiciendis cumque saepe suscipit, amet sapiente commodi nisi nesciunt placeat dolorem fuga officiis unde dignissimos sit aperiam quidem modi. Veritatis sed, ipsa aliquid hic, possimus quam facere voluptates libero reprehenderit vel nemo dolores inventore doloribus esse. Vero placeat architecto voluptas fugiat? Praesentium illum rerum eligendi incidunt a. Inventore soluta, quo sit amet quod, iure veniam aut libero enim excepturi suscipit sed temporibus, natus autem totam distinctio. Quia dignissimos, cupiditate expedita facilis eaque possimus repellat quidem, fugiat veritatis modi magnam, error natus consectetur quod reiciendis dolores corrupti? --}}
