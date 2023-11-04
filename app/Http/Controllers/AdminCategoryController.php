@@ -66,9 +66,12 @@ class AdminCategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function edit(Category $category)
+    public function edit(Category $category, $id)
     {
-        //
+        $data = Category::findOrFail($id);
+        return view('dashboard.categories.edit', [
+            'category' => $data,
+        ]);
     }
 
     /**

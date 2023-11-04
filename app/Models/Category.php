@@ -18,9 +18,9 @@ class Category extends Model
         return $this->hasMany(Post::class);
     }
 
-    public function getRouteKeyName()
+    public function getRouteKey()
     {
-        return 'slug';
+        return $this->slug;
     }
 
     public function sluggable(): array
