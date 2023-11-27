@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\DashboardPostController;
 use App\Models\Category;
+use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PostsController;
@@ -55,13 +56,19 @@ Route::post('/register', [RegisterController::class, 'register_post']);
 
 // Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 Route::get('/dashboard', function() {
-    return view('dashboard.index');
+
+    return view('dashboard.index', [
+        'posts' => Post::all(),
+        'categories' => Category::all()
+    ]);
 })->middleware('auth');
 
 Route::get('/dashboard/posts/check-slug', [DashboardPostController::class, 'checkSlug'])->middleware('auth');
 Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
-Route::resource('/dashboard/categories', AdminCategoryController::class)->except(['show','edit'])->middleware('is_admin');
+
+Route::resource('/dashboard/categories', AdminCategoryController::class)->except(['show','edit', 'update'])->middleware('is_admin');
 Route::get('dashboard/categories/{id}/edit', [AdminCategoryController::class, 'edit'])->name('categories.edit');
+Route::get('dashboard/categories/{id}', [AdminCategoryController::class, 'update'])->name('categories.update');
 Route::get('/dashboard/categories/check-slug', [AdminCategoryController::class, 'checkSlug'])->middleware('auth');
 // Route::post('/dashboard/categories', [AdminCategoryController::class, 'store'])->middleware('auth');
 // Route::get('/dashboard/categories/sports/edit', [AdminCategoryController::class, 'edit']);

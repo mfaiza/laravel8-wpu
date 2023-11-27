@@ -81,9 +81,22 @@ class AdminCategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Category $category)
+    public function update(Request $request, Category $category, $id)
     {
-        //
+        $rules = [
+            'name' => 'required|max:255',
+        ];
+
+        if ($request->slug != $category->slug) {
+            $rules['slug'] = 'required|unique:categories';
+        }
+
+        $validateData = $request->validate($rules);
+        // $validateData['user_id'] = auth()->user()->id;
+
+        Category::where('id', $category->id)->update($validateData);
+
+        return redirect('/dashboard/categories')->with('success', 'Category telah diupdate!!!');
     }
 
     /**

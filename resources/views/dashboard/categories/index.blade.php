@@ -99,4 +99,24 @@
             }
         });
     }
+
+    function update(id) {
+        const category = $("#category").val();
+        const slug = $("#slug").val();
+
+        var url = '{{ route('categories.update', ':id') }}';
+        url = url.replace(':id', id);
+        $.ajax({
+            type: "get",
+            url: url,
+            data: {
+                "name": category,
+                "slug": slug
+            },
+            success: function(data) {
+                $(".btn-close").click();
+                // $("#body-create-category").html('');
+            }
+        });
+    }
 </script>
