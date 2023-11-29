@@ -25,7 +25,7 @@ Route::get('/', function () {
     return view('home', [
         "title" => "Home",
     ]);
-});
+})->name('index');
 Route::get('/about', function () {
     return view('about', [
         "title" => "About",

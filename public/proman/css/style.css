@@ -103,7 +103,8 @@
 }
 
 .img-section {
-    background: url(../img/bg-header.png) left bottom no-repeat;
+    
+    background: url(/proman/img/bg-header.png) right bottom no-repeat;
 }
 
 /*** Header ***/

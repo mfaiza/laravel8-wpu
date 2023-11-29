@@ -8,8 +8,7 @@
                     <h3 class="text-primary mb-3">I'm</h3>
                     <h1 class="display-3 mb-3">Mochamad Faiz Alamsyah</h1>
                     <h2 class="typed-text-output d-inline"></h2>
-                    <div class="typed-text d-none">Web Designer, Web Developer, Front End Developer, Apps Designer, Apps
-                        Developer</div>
+                    <div class="typed-text d-none">Web Developer, Back End Developer</div>
                     <div class="d-flex align-items-center pt-5">
                         <a href="" class="btn btn-primary py-3 px-4 me-5">Download CV</a>
                         <button type="button" class="btn-play" data-bs-toggle="modal"
@@ -38,67 +37,43 @@
                     <div class="row align-items-center">
                         <div class="col-md-6">
                             <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
+                                <div class="d-flex justify-content-evenly">
                                     <h6 class="font-weight-bold">HTML</h6>
-                                    <h6 class="font-weight-bold">95%</h6>
+                                    <h6 class="font-weight-bold">Laravel</h6>
                                 </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95"
-                                        aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
+
                             </div>
                             <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">CSS</h6>
-                                    <h6 class="font-weight-bold">85%</h6>
+                                <div class="d-flex justify-content-evenly">
+                                    <h6 class="font-weight-bold">Bootstrap</h6>
+                                    <h6 class="font-weight-bold">Postman</h6>
                                 </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85"
-                                        aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
+
                             </div>
                             <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">PHP</h6>
-                                    <h6 class="font-weight-bold">90%</h6>
+                                <div class="d-flex justify-content-evenly">
+                                    <h6 class="font-weight-bold">Ruby on Rails</h6>
+                                    <h6 class="font-weight-bold">Github</h6>
                                 </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90"
-                                        aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
+
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">Javascript</h6>
-                                    <h6 class="font-weight-bold">90%</h6>
+                                <div class="d-flex justify-content-evenly">
+                                    <h6 class="font-weight-bold">Microsoft Excel</h6>
+                                    <h6 class="font-weight-bold">Data Entry</h6>
                                 </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90"
-                                        aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
+
                             </div>
                             <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">Angular JS</h6>
-                                    <h6 class="font-weight-bold">95%</h6>
+                                <div class="d-flex justify-content-evenly">
+                                    <h6 class="font-weight-bold">Testing</h6>
+                                    <h6 class="font-weight-bold">MySQL</h6>
                                 </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="95"
-                                        aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
+
                             </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">Wordpress</h6>
-                                    <h6 class="font-weight-bold">85%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="85"
-                                        aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -109,65 +84,36 @@
                                 href="#tab-1">Experience</button>
                         </li>
                         <li class="nav-item w-50">
-                            <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill"
-                                href="#tab-2">Education</button>
+                            <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill" href="#tab-2">Education</button>
                         </li>
                     </ul>
                     <div class="tab-content">
                         <div id="tab-1" class="tab-pane fade show p-0 active">
                             <div class="row gy-5 gx-4">
                                 <div class="col-sm-6">
-                                    <h5>UI Designer</h5>
+                                    <h5>Software Engineering</h5>
                                     <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2000 - 2045</p>
-                                    <h6 class="mb-0">Apex Software Inc</h6>
+                                    <p class="text-primary mb-1">2019 - 2020</p>
+                                    <h6 class="mb-0">PT Nawa Darsana Teknologi</h6>
                                 </div>
                                 <div class="col-sm-6">
-                                    <h5>Product Designer</h5>
+                                    <h5>Web Developer</h5>
                                     <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2000 - 2045</p>
-                                    <h6 class="mb-0">Apex Software Inc</h6>
+                                    <p class="text-primary mb-1">2021 </p>
+                                    <h6 class="mb-0">PT Berdhaya Gemilang Mandiri</h6>
                                 </div>
-                                <div class="col-sm-6">
-                                    <h5>Web Designer</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2000 - 2045</p>
-                                    <h6 class="mb-0">Apex Software Inc</h6>
-                                </div>
-                                <div class="col-sm-6">
-                                    <h5>Apps Designer</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2000 - 2045</p>
-                                    <h6 class="mb-0">Apex Software Inc</h6>
-                                </div>
+
                             </div>
                         </div>
                         <div id="tab-2" class="tab-pane fade show p-0">
                             <div class="row gy-5 gx-4">
                                 <div class="col-sm-6">
-                                    <h5>UI Design Course</h5>
+                                    <h5>Software Engineering</h5>
                                     <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2000 - 2045</p>
-                                    <h6 class="mb-0">Cambridge University</h6>
+                                    <p class="text-primary mb-1">2017 - 2020</p>
+                                    <h6 class="mb-0">SMK Wikrama Bogor</h6>
                                 </div>
-                                <div class="col-sm-6">
-                                    <h5>IOS Development</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2000 - 2045</p>
-                                    <h6 class="mb-0">Cambridge University</h6>
-                                </div>
-                                <div class="col-sm-6">
-                                    <h5>Web Design</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2000 - 2045</p>
-                                    <h6 class="mb-0">Cambridge University</h6>
-                                </div>
-                                <div class="col-sm-6">
-                                    <h5>Apps Design</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2000 - 2045</p>
-                                    <h6 class="mb-0">Cambridge University</h6>
-                                </div>
+
                             </div>
                         </div>
                     </div>
