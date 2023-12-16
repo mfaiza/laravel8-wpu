@@ -100,22 +100,24 @@
         });
     }
 
-    function update(id) {
+    function updateCate(id) {
         const category = $("#category").val();
         const slug = $("#slug").val();
-
         var url = '{{ route('categories.update', ':id') }}';
         url = url.replace(':id', id);
         $.ajax({
-            type: "get",
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            type: "PUT",
             url: url,
             data: {
-                "name": category,
-                "slug": slug
+                name: category,
+                slug: slug
             },
             success: function(data) {
                 $(".btn-close").click();
-                // $("#body-create-category").html('');
+                alert(data.message);
             }
         });
     }

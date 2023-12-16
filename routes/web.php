@@ -68,7 +68,7 @@ Route::resource('/dashboard/posts', DashboardPostController::class)->middleware(
 
 Route::resource('/dashboard/categories', AdminCategoryController::class)->except(['show','edit', 'update'])->middleware('is_admin');
 Route::get('dashboard/categories/{id}/edit', [AdminCategoryController::class, 'edit'])->name('categories.edit');
-Route::get('dashboard/categories/{id}', [AdminCategoryController::class, 'update'])->name('categories.update');
+Route::put('dashboard/categories/{id}', [AdminCategoryController::class, 'update'])->name('categories.update');
 Route::get('/dashboard/categories/check-slug', [AdminCategoryController::class, 'checkSlug'])->middleware('auth');
 // Route::post('/dashboard/categories', [AdminCategoryController::class, 'store'])->middleware('auth');
 // Route::get('/dashboard/categories/sports/edit', [AdminCategoryController::class, 'edit']);

@@ -94,7 +94,7 @@ class AdminCategoryController extends Controller
         $validateData = $request->validate($rules);
         // $validateData['user_id'] = auth()->user()->id;
 
-        Category::where('id', $category->id)->update($validateData);
+        Category::where('id', $id)->update($validateData);
 
         return redirect('/dashboard/categories')->with('success', 'Category telah diupdate!!!');
     }
